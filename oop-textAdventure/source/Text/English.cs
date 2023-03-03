@@ -8,7 +8,7 @@ public class English : Language
         DefaultName = "Bob";
         Welcome = "Welcome {0} to your OOP Adventure";
         DefaultRoomName = "Room {0} ({1}, {2})";
-        DefaultRoomDescription = " You are in a {0} room with doors to the {1}";
+        DefaultRoomDescription = " You are in a {0} room with doors to the {1}.";
         ActionError = "You can't do that.";
         Go = "Go";
         GoError = "You can't go that way.";
@@ -41,5 +41,10 @@ public class English : Language
         Gold = "{0} gold {1}";
         Coin = "coin";
         Coins = Coin + "s";
+        Plural = "s";
+        Is = "is";
+        Are = "are";
+        TotalItems = " There {0} {1} item{2} in the room: ";
+        Period = ".";
     }
 }

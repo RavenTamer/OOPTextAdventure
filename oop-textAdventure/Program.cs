@@ -22,6 +22,14 @@ Room lastRoom = null;
 house.CreateRooms(3, 3);
 house.DecorateRooms();
 
+var items = new List<Item>()
+{
+    new Key(house),
+    new Chest(new[] {new Gold(100)}, house)
+};
+
+house.PopulateRooms(items);
+
 house.GoToStartingRoom();
 
 Console.WriteLine(Text.Language.Welcome, player.Name);

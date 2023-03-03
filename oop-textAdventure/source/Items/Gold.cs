@@ -12,7 +12,7 @@ public class Gold : Item
         get
         {
             var ending = Value == 1 ? Text.Language.Coin : Text.Language.Coins;
-            return string.Format(Text.Language.Coin, Value.ToString(), ending);
+            return string.Format(Text.Language.Gold, Value.ToString(), ending);
         } 
     }
     public int Value { get; private set; }

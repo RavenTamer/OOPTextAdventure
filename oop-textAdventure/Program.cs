@@ -14,11 +14,11 @@ if(name == String.Empty)
 }
 
 Player player = new Player(name);
-House house = new House(player);
-Actions.Instance.Register(new Go(house));
-Actions.Instance.Register(new Backpack(player));
-Room lastRoom = null;
 
+
+Console.WriteLine(Text.Language.Welcome, player.Name);
+
+House house = new House(player);
 house.CreateRooms(3, 3);
 house.DecorateRooms();
 
@@ -30,9 +30,16 @@ var items = new List<Item>()
 
 house.PopulateRooms(items);
 
+Actions.Instance.Register(new Go(house));
+Actions.Instance.Register(new Backpack(player));
+Actions.Instance.Register(new Take(house));
+Actions.Instance.Register(new Use(house));
+
+
+
 house.GoToStartingRoom();
 
-Console.WriteLine(Text.Language.Welcome, player.Name);
+Room lastRoom = null;
 
 while(run)
 {

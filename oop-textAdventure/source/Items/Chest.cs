@@ -6,7 +6,7 @@ public class Chest : Item, IInventory
     private readonly Inventory _inventory = new();
 
     public override string Name => Text.Language.Chest;
-    public bool locked => true;
+    public bool Locked => true;
     public Chest(Item?[] items, House house)
     {
         CanTake = false;
@@ -24,7 +24,7 @@ public class Chest : Item, IInventory
         {
             var items = InventoryList;
 
-            if(locked)
+            if(Locked)
             {
                 Console.WriteLine(Text.Language.UnlockChest);
             }
